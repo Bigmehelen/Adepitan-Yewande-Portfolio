@@ -30,5 +30,19 @@
     ".next/dev/types/**/*.ts",
     "**/*.mts"
 , "app/layout.js"  ],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
+
+  "theme": {
+    "extend": {
+      "colors": {
+        "lightHover": "#fcf4ff",
+        "darkHover": "2a004a",
+        "darkTheme": "#11001f",
+      },
+      "fontFamily": {
+        "outfit": ["Outfit", "sans-serif"],
+        "ovo": ["Ovo", "sans-serif"]
+      }
+    }
+  } 
 }
