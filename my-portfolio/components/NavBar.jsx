@@ -16,7 +16,7 @@ const NavBar = () => {
         <li><a className="font-Ovo" href="#top">Home</a></li>
         <li><a className="font-Ovo" href="#about">About</a></li>
         <li><a className="font-Ovo" href="#services">Services</a></li>
-        <li><a className="font-Ovo" href="#myWork">My Work</a></li>
+        <li><a className="font-Ovo" href="#project">Project</a></li>
         <li><a className="font-Ovo" href="#contact">Contact Me</a></li>
       </ul>
       <div className="flex items-center, gap-4"> 
@@ -39,7 +39,7 @@ const NavBar = () => {
         <li><a className="font-Ovo" onClick={closeMenu} href="#top">Home</a></li>
         <li><a className="font-Ovo" onClick={closeMenu} href="#about">About</a></li>
         <li><a className="font-Ovo" onClick={closeMenu}  href="#services">Services</a></li>
-        <li><a className="font-Ovo" onClick={closeMenu} href="#myWork">My Work</a></li>
+        <li><a className="font-Ovo" onClick={closeMenu} href="#project">Project</a></li>
         <li><a className="font-Ovo" onClick={closeMenu} href="#contact">Contact Me</a></li>
 
       </ul>

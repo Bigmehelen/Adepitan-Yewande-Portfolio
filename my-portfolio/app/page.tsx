@@ -1,8 +1,8 @@
 'use client';
-import Head from "next/head";
 import NavBar from "../components/NavBar";
 import Header from "../components/Header";
 import About from "../components/About";
+import Services from "../components/Services";
 
 function Home() {
   return (
@@ -10,6 +10,7 @@ function Home() {
     <NavBar />
     <Header/>
     <About/>
+    <Services/>
     </>
   );
 }

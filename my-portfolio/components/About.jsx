@@ -21,17 +21,9 @@ const infoList = [
 
 const About = () => {
   return (
-    <div
-      id="about"
-      className="w-full px-[12%] py-10 scroll-mt-20"
-    >
-      <h1 className="text-lg md:text-xl mb-2 text-center font-Ovo">
-        Introduction
-      </h1>
+    <div id="about" className="w-full px-[12%] py-10 scroll-mt-20">
 
-      <h3 className="font-Ovo text-2xl text-center mb-10">
-        About me
-      </h3>
+      <h3 className="font-Ovo text-3xl text-center mb-5"> About me </h3>
 
       <div className="flex flex-col w-full lg:flex-row items-center justify-center gap-12">
         
@@ -40,7 +32,7 @@ const About = () => {
         </div>
 
         <div className="flex-1">
-          <p className="mb-10 max-w-xl font-Ovo">
+          <p className="mb-6 max-w-xl font-Ovo">
             I’m a software engineer with a strong interest in building reliable,
             user-focused applications. I enjoy turning complex problems into
             simple, scalable solutions and writing clean, maintainable code.

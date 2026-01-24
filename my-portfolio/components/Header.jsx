@@ -10,7 +10,7 @@ const Header = () => {
         <h3 className='text-xl md:2xl mb-2 font-Ovo'> Hi! I'm Adepitan Yewande Helen </h3> 
         <h1 className='text-2xl md:text-5xl font-Ovo mb-2'> A Software Engineer based in Lagos </h1>
         <p className='max-w-2xl mx-auto font-Ovo'> I’m a software engineer with a strong interest in building reliable,
-             user-focused applications,I Live in Lagos Nigeria.
+             user-focused applications, and I Live in Lagos Nigeria.
         </p>
         <div>
             <a href="#contact" className='flex items-center box-border border-2 border-black/50 bg-black text-white justify-center px-8 py-3 ml-4 rounded-full hover:bg-gray-800 transition-all duration-200 ease-in-out'>
