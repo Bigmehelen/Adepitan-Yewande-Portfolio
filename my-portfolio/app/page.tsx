@@ -9,15 +9,17 @@ import Footer from "../components/Footer";
 
 function Home() {
   return (
-    <> 
-    <NavBar />
-    <Header/>
-    <About/>
-    <Services/>
-    <Projects/>
-    <Contact/>
-    <Footer/>
-    </>
+    <main className="relative flex flex-col overflow-hidden justify-center "> 
+      <div className="w-full">
+      <NavBar />
+      <Header/>
+      <About/>
+      <Services/>
+      <Projects/>
+      <Contact/>
+      <Footer/>
+      </div>
+    </main>
   );
 }
 export default Home;

@@ -21,7 +21,7 @@ const infoList = [
 
 const About = () => {
   return (
-    <div id="about" className="w-full px-[12%] py-10 scroll-mt-20">
+    <div id="about" className="w-full px-[12%] h-screen py-10 scroll-mt-20">
 
       <h3 className="font-Ovo text-3xl text-center mb-5"> About me </h3>
 

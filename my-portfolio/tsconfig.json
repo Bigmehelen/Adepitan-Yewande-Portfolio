@@ -34,13 +34,14 @@
 
   "theme": {
     "extend": {
+      "content": ["./app/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
       "colors": {
         "lightHover": "#fcf4ff",
           "darkHover": "2a004a",
           "darkTheme": "#11001f",
         },
         "fontFamily": {
-          "Outfit": ["Outfit", "sans-serif"],
+          "Inter": ["Inter", "sans-serif"],
           "Ovo": ["Ovo", "sans-serif"]
         }
       }

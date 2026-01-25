@@ -10,7 +10,7 @@ const NavBar = () => {
     }
     
   return (
-    <nav className="w-full fixed flex items-center top-0 h-20 left-0 justify-between px-6 py-4 lg:px-8 xl:px-[8%] bg-white shadow-md z-50">
+    <nav className="w-full fixed flex items-center fill-purple top-0 h-20 left-0 justify-between px-6 py-4 lg:px-8 xl:px-[8%] bg-white shadow-md z-50">
       <span className="font-Ovo text-3xl"> Yewande .</span>
       <ul className='hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-8 py-3 bg-white shadow-sm bg-opacity-50'>
         <li><a className="font-Ovo" href="#top">Home</a></li>

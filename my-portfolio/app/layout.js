@@ -1,7 +1,8 @@
-import {Outfit, Ovo } from "next/font/google";
+import { Inter, Ovo } from "next/font/google";
+import AnimatedBackground from "@/components/AnimatedBackground";
 import "./globals.css";
 
-const outfit = Outfit({
+const inter = Inter({
   subsets: ["latin"], weight: ["400", "600", "700"],
 });
 
@@ -13,8 +14,9 @@ export default function RootLayout({children}){
   return (
     <html lang="en">
       <body
-        className={`${outfit.className} ${ovo.className} antialiased overflow-x-hidden leading-8`}
+        className={`${inter.className} ${ovo.className} antialiased overflow-x-hidden leading-8`}
       >
+        <AnimatedBackground />
         {children}
       </body>
     </html>
