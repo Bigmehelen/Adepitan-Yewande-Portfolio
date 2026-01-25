@@ -1,5 +1,4 @@
 import { Inter, Ovo } from "next/font/google";
-import AnimatedBackground from "@/components/AnimatedBackground";
 import "./globals.css";
 
 const inter = Inter({
@@ -16,7 +15,6 @@ export default function RootLayout({children}){
       <body
         className={`${inter.className} ${ovo.className} antialiased overflow-x-hidden leading-8`}
       >
-        <AnimatedBackground />
         {children}
       </body>
     </html>

@@ -24,11 +24,10 @@ const portfolioData = [
 
 const Project = () => {
   return (
-    <section
-      id="project"
-      className="w-full px-[12%] py-20 scroll-mt-20 flex flex-col items-center text-center"
+    <div id="project"
+      className="w-11/12 max-w-5xl mx-auto pt-20 mt-10 text-center flex flex-col items-center gap-4"
     >
-      <h1 className="text-2xl mb-2 font-Ovo">My Portfolio</h1>
+      <h1 className="text-2xl mb-10 font-Ovo">My Portfolio</h1>
 
       <p className="text-lg font-Ovo max-w-2xl mx-auto mt-5 mb-10">
         Welcome to my portfolio! You can explore all my projects.
@@ -61,7 +60,7 @@ const Project = () => {
           </div>
         ))}
       </div>
-    </section>
+    </div>
   );
 };
 

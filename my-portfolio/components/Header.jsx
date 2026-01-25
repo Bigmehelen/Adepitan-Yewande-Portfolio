@@ -1,5 +1,4 @@
 "use client";
-
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -7,7 +6,7 @@ import { cn } from "../lib/Utils";
 
 const Header = () => {
   return (
-    <section className="w-11/12 max-w-3xl pt(--nav-h)] mt-10 text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
+    <section className="w-11/12 max-w-3xl pt(--nav-h) mt-10 text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
       
       <motion.div
         initial={{ opacity: 0, y: -40 }}

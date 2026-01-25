@@ -19,10 +19,8 @@ const Contact = () => {
   };
 
   return (
-    <section
-      id="contact"
-      className="w-full px-[12%] py-20 scroll-mt-20 flex flex-col items-center text-center"
-    >
+    <div id="contact"
+      className="w-11/12 max-w-3xl mx-auto pt-24 mt-10 text-center flex flex-col items-center gap-4">
       <h1 className="text-lg mb-2 font-Ovo"> Connect With Me </h1>
 
       <h3 className="font-Ovo text-3xl mb-6"> Contact </h3>
@@ -43,7 +41,7 @@ const Contact = () => {
       </form>
        <span className="mt-4">{result}</span>
 
-    </section>
+    </div>
   )
 }
 
