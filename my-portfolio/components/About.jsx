@@ -24,7 +24,7 @@ const About = () => {
     <div id="about" className="w-11/12 max-w-3xl mx-auto pt-20 text-center flex flex-col items-center gap-4"
 >
       <h1 className="font-Ovo text-xl text-center mb-5"> Introduction </h1>
-      <h3 className="font-Ovo text-2xl text-center mb-5"> About me </h3>
+      <h3 className="font-Ovo text-3xl text-center mb-5"> About Me </h3>
 
       <p className="mb-6 max-w-3xl font-Ovo">
             I’m a software engineer with a strong interest in building reliable,
