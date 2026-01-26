@@ -21,28 +21,28 @@ const infoList = [
 
 const About = () => {
   return (
-    <div id="about" className="w-11/12 max-w-3xl mx-auto pt-20 mt-10 text-center flex flex-col items-center gap-4"
+    <div id="about" className="w-11/12 max-w-3xl mx-auto pt-20 text-center flex flex-col items-center gap-4"
 >
       <h1 className="font-Ovo text-xl text-center mb-5"> Introduction </h1>
       <h3 className="font-Ovo text-2xl text-center mb-5"> About me </h3>
 
-      <div className="flex flex-col w-full lg:flex-row items-center justify-center gap-12">
-        
-        <div className="w-64 sm:w-80 rounded-3xl py-10 flex-1">
-          <Image src="/wande.jpeg" alt="About image" width={400} height={400} className="rounded-3xl w-full h-auto"/>
-        </div>
-
-        <div className="flex-1">
-          <p className="mb-6 max-w-lg font-Ovo">
+      <p className="mb-6 max-w-3xl font-Ovo">
             I’m a software engineer with a strong interest in building reliable,
             user-focused applications. I enjoy turning complex problems into
             simple, scalable solutions and writing clean, maintainable code.
             I’m always learning, experimenting with new technologies, and
             looking for opportunities to grow as a developer while making a
             meaningful impact.
-          </p>
+        </p>
 
-          <ul className="space-y-4 grid grid-cols-2 max-w-xl">
+      <div className="flex flex-col w-full lg:flex-row items-center justify-center gap-12 sm:space-y-4">
+        
+        <div className="w-64 sm:w-80 rounded-3xl py-10 flex-1">
+          <Image src="/wande.jpeg" alt="About image" width={400} height={400} className="rounded-3xl w-full h-auto"/>
+        </div>
+
+        <div className="flex-1">
+          <ul className="space-y-4 grid grid-cols-2 gap-6 max-w-2xl">
             {infoList.map((item, index) => (
               <li key={index} className="border-[-0.5px] border-gray-400 py-4 cursor-pointer 
               hover:-translate-y-1 duration-500 hover:light-Hover">

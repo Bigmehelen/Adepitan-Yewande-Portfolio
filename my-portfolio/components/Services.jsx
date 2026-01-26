@@ -73,7 +73,7 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="w-11/12 max-w-5xl mx-auto mt-10 pt-20 text-center flex flex-col items-center gap-4"
+      className="w-11/12 max-w-3xl mx-auto mt-10 pt-20 text-center flex flex-col items-center gap-4"
     >
       <h1 className="text-lg mb-2 font-Ovo">What I Offer</h1>
 

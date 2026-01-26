@@ -25,7 +25,7 @@ const portfolioData = [
 const Project = () => {
   return (
     <div id="project"
-      className="w-11/12 max-w-5xl mx-auto pt-20 mt-10 text-center flex flex-col items-center gap-4"
+      className="w-11/12 max-w-3xl mx-auto pt-20 mt-10 text-center flex flex-col items-center gap-4"
     >
       <h1 className="text-2xl mb-10 font-Ovo">My Portfolio</h1>
 

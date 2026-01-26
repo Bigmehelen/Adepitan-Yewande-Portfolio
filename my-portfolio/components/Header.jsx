@@ -6,14 +6,14 @@ import { cn } from "../lib/Utils";
 
 const Header = () => {
   return (
-    <section className="w-11/12 max-w-3xl pt(--nav-h) mt-10 text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
+    <section className="w-11/12 max-w-3xl pt(--nav-h) mt-10 text-center mx-auto h-screen sm:space-y-4 flex flex-col items-center justify-center gap-4">
       
       <motion.div
         initial={{ opacity: 0, y: -40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
         className={cn(
-          "rounded-md px-4 py-2 text-sm font-medium bg-black text-white hover:bg-gray-800 transition"
+          "rounded-md px-4 py-2 text-sm sm:space-y-4 font-medium bg-black text-white hover:bg-gray-800 transition"
         )}
       >
         Welcome to My Portfolio

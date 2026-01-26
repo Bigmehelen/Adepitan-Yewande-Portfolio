@@ -31,11 +31,11 @@ const Contact = () => {
         You can contact me via email at <span className="font-bold text-black"><a href="mailto:wandebronze@gmail.com">wandebronze@gmail.com</a> </span> or connect with me on LinkedIn.
       </p>
       <form onSubmit={onSubmit} className='max-w-2xl mx-auto'>
-        <div className='grid grid-cols-auto gap-6 mt-6 mb-4 '>
-            <input type="text" placeholder="Your Name" name="name" required className="border flex-1 outline-none border-gray-300 rounded-lg p-3 w-72 mb-2"/>
-            <input type="email" placeholder="Your Email" name="email" required className="border flex-1 outline-none border-gray-300 rounded-lg p-3 w-72 mb-6"/>
+        <div className='flex flex-col gap-6 mt-6 mb-4 '>
+            <input type="text" placeholder="Your Name" name="name" required className="border outline-none border-gray-600 rounded-lg p-3 w-72 mb-2"/>
+            <input type="email" placeholder="Your Email" name="email" required className="border outline-none border-gray-600 rounded-lg p-3 w-72 mb-6"/>
         </div>
-        <textarea placeholder="Your Message" name="message" rows='6' required className="border border-gray-300 rounded-lg p-3 w-72 h-32 mb-4"/>
+        <textarea placeholder="Your Message" name="message" rows='6' required className="border border-gray-600 rounded-lg p-3 w-72 h-32 mb-4"/>
         <br/>
         <button type="submit" className="bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800 transition-all duration-200 ease-in-out"> Send Message </button>
       </form>
