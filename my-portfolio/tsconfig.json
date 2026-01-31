@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -11,7 +15,7 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "react-jsx",
+    "jsx": "preserve",
     "incremental": true,
     "plugins": [
       {
@@ -19,7 +23,9 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"]
+      "@/*": [
+        "./*"
+      ]
     }
   },
   "include": [
@@ -28,22 +34,34 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
-    "**/*.mts"
-, "app/layout.js"  ],
-  "exclude": ["node_modules"],
-
+    "**/*.mts",
+    "app/layout.js",
+    "next.config.js"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
   "theme": {
     "extend": {
-      "content": ["./app/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
+      "content": [
+        "./app/**/*.{js,ts,jsx,tsx}",
+        "./components/**/*.{js,ts,jsx,tsx}"
+      ],
       "colors": {
         "lightHover": "#fcf4ff",
-          "darkHover": "2a004a",
-          "darkTheme": "#11001f",
-        },
-        "fontFamily": {
-          "Inter": ["Inter", "sans-serif"],
-          "Ovo": ["Ovo", "sans-serif"]
-        }
+        "darkHover": "2a004a",
+        "darkTheme": "#11001f"
+      },
+      "fontFamily": {
+        "Inter": [
+          "Inter",
+          "sans-serif"
+        ],
+        "Ovo": [
+          "Ovo",
+          "sans-serif"
+        ]
       }
-    } 
+    }
   }
+}
