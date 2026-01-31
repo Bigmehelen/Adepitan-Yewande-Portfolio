@@ -9,7 +9,7 @@ import Footer from "../components/Footer.jsx";
 
 function Home() {
   return (
-    <main className="relative flex flex-col overflow-hidden justify-center "> 
+    <div className="relative flex flex-col overflow-hidden justify-center "> 
       <div className="w-full">
       <NavBar />
       <Header/>
@@ -19,7 +19,7 @@ function Home() {
       <Contact/>
       <Footer/>
       </div>
-    </main>
+    </div>
   );
 }
 export default Home;
