@@ -37,7 +37,7 @@ const Header = () => {
         >
           <div className="max-w-xs text-left">
             <p className="text-luxury-gray text-sm leading-relaxed ">
-              A Nigerian based software engineer, and I specialize in building highly functional and visually stunning web applications that focus on the user journey.
+              Im a Nigeria based software engineer, and I specialize in building highly functional and visually stunning web applications that focus on the user journey.
             </p>
           </div>
 
