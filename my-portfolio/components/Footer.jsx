@@ -1,71 +1,39 @@
 import React from 'react'
-import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="border-t border-gray-200 dark:border-gray-800 bg-rose-50 dark:bg-black">
-      <div className="mx-auto w-full px-auto px-6 py-10">
-        <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+    <footer className="w-full bg-rose-60 py-20 px-6 lg:px-[8%] border-t border-luxury-black/5">
+      <div className="max-w-360 mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
 
-          <div>
-            <h2 className="text-lg font-semibold text-gray-900 dark:text-white">
-            Adepitan Yewande Helen
-            </h2>
-            <p className="mt-2 text-sm text-gray-600 dark:text-gray-400 max-w-sm">
-              Crafting thoughtful, high-performance web experiences with a focus on clarity,
-               usability, and impact.
-            </p>
-          </div>
-
-          <div className="flex gap-6 text-sm">
-            <Link
-              href="#project"
-              className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition"
-            >
-              Projects
-            </Link>
-            <Link
-              href="#about"
-              className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition"
-            >
-              About
-            </Link>
-            <Link
-              href="#contact"
-              className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition"
-            >
-              Contact
-            </Link>
-          </div>
-
-          <div className="flex gap-4">
-            <a
-              href="https://github.com/Bigmehelen"
-              target="_blank"
-              className="text-gray-500 hover:text-gray-900 dark:hover:text-white transition"
-            >
-              GitHub
-            </a>
-            <a
-              href="https://linkedin.com/in/yewande-adepitan-63607930b"
-              target="_blank"
-              className="text-gray-500 hover:text-gray-900 dark:hover:text-white transition"
-            >
-              LinkedIn
-            </a>
-            <a
-              href="https://twitter.com/yourusername"
-              target="_blank"
-              className="text-gray-500 hover:text-gray-900 dark:hover:text-white transition"
-            >
-              Twitter
-            </a>
-          </div>
+        <div className="space-y-4 text-center md:text-left">
+          <h2 className="font-serif text-3xl text-luxury-black tracking-tighter">
+            Yewande<span className="text-luxury-gray">.</span>
+          </h2>
+          <p className="text-xs uppercase tracking-[0.2em] font-bold text-luxury-gray">
+            Software Engineer & Product Designer
+          </p>
         </div>
 
-        <div className="mt-10 text-center text-xs text-gray-500 dark:text-gray-400">
-          © {new Date().getFullYear()} Adepitan Yewande Helen. All rights reserved.
+        <div className="flex flex-wrap items-center justify-center gap-12">
+          {['GitHub', 'LinkedIn', 'Twitter'].map((social) => (
+            <a
+              key={social}
+              href={`https://${social.toLowerCase()}.com`}
+              target="_blank"
+              className="text-xs uppercase tracking-widest font-bold text-luxury-black hover:text-luxury-gray transition-colors pb-1 border-b border-transparent hover:border-luxury-gray"
+            >
+              {social}
+            </a>
+          ))}
         </div>
+
+        <div className="text-right">
+          <p className="text-[10px] uppercase tracking-widest font-bold text-luxury-gray">
+            © {new Date().getFullYear()} Adepitan Yewande Helen. <br />
+            All rights reserved.
+          </p>
+        </div>
+
       </div>
     </footer>
   )

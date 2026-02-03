@@ -20,9 +20,8 @@ const Contact = () => {
 
   return (
     <section id="contact" className="w-full py-32 px-6 lg:px-[8%] bg-luxury-white">
-      <div className="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24">
+      <div className="max-w-360 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24">
 
-        {/* Left: Content */}
         <div className="space-y-12">
           <div className="space-y-6">
             <h4 className="text-xs uppercase tracking-[0.3em] font-bold text-luxury-gray">Interaction</h4>
@@ -34,7 +33,7 @@ const Contact = () => {
 
           <div className="space-y-8 max-w-md">
             <p className="text-xl text-luxury-gray leading-relaxed font-medium">
-              I am currently available for new projects and collaborations. If you have an idea, let's bring it to life.
+              I am currently available for new projects and collaborations. If you have an idea You want us to work on, let's bring it to life.
             </p>
             <div className="space-y-2">
               <h5 className="text-xs uppercase tracking-widest font-bold text-luxury-black">Direct Email</h5>
@@ -45,7 +44,6 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* Right: Form */}
         <div className="bg-white p-12 lg:p-16 rounded-3xl border border-luxury-black/5 shadow-sm">
           <form onSubmit={onSubmit} className="space-y-12">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -54,7 +52,7 @@ const Contact = () => {
                 <input
                   type="text"
                   name="name"
-                  placeholder="John Doe"
+                  placeholder="Your name"
                   required
                   className="w-full bg-transparent border-b border-luxury-black/10 py-4 outline-none focus:border-luxury-black transition-colors"
                 />
@@ -64,7 +62,7 @@ const Contact = () => {
                 <input
                   type="email"
                   name="email"
-                  placeholder="john@example.com"
+                  placeholder="name@example.com"
                   required
                   className="w-full bg-transparent border-b border-luxury-black/10 py-4 outline-none focus:border-luxury-black transition-colors"
                 />

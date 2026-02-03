@@ -22,10 +22,10 @@ const infoList = [
 const About = () => {
   return (
     <section id="about" className="w-full py-32 px-6 lg:px-[8%] bg-white">
-      <div className="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+      <div className="max-w-360 mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
 
         <div className="lg:col-span-5 space-y-12">
-          <div className="relative aspect-[4/5] overflow-hidden rounded-2xl group">
+          <div className="relative aspect-4/5 overflow-hidden rounded-2xl group">
             <Image src="/wande.jpeg" alt="About image" fill className="object-cover transition-all duration-700" />
           </div>
           <div className="space-y-4">

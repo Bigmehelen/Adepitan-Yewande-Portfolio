@@ -1,6 +1,35 @@
 @import "tailwindcss";
 
-*{
-  font-family: Outfit, Ovo;
+@theme {
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+  --color-luxury-black: #0F0F0F;
+  --color-luxury-dark: #1A1A1A;
+  --color-luxury-white: #FDFDFD;
+  --color-luxury-gray: #757575;
+  --color-luxury-beige: #D4CDC3;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  ::selection {
+    background-color: var(--color-luxury-beige);
+    color: var(--color-luxury-black);
+  }
+}
+
+* {
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4, .font-serif {
+  font-family: var(--font-serif);
+}
+
+.text-stroke {
+  -webkit-text-stroke: 1px currentColor;
+  color: transparent;
 }
 

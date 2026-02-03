@@ -1,133 +1,70 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 
 const serviceData = [
   {
-    id: "app-dev",
-    icon: "/laptop-outline.png",
-    title: "Application Development",
-    description:
-      "Designing, building, and maintaining software applications that solve real problems.",
-    link: "#",
+    id: "01",
+    title: "Web Architecture",
+    description: "Designing scalable, high-performance infrastructures and robust backend systems for modern applications.",
   },
   {
-    id: "frontend-dev",
-    icon: "/code-outline.png",
-    title: "Frontend Development",
-    description:
-      "Creating responsive, accessible, and user-friendly interfaces for web and mobile applications.",
-    link: "#",
+    id: "02",
+    title: "Interface Design",
+    description: "Creating intuitive, accessible, and visually striking user interfaces that elevate the human experience.",
   },
   {
-    id: "backend-dev",
-    icon: "/logo-electron.png",
-    title: "Backend Development",
-    description:
-      "Building secure, scalable server-side systems, including APIs, databases, and business logic.",
-    link: "#",
+    id: "03",
+    title: "Full-Stack Engineering",
+    description: "Seamlessly integrating frontend and backend technologies to deliver complete, production-ready digital products.",
   },
   {
-    id: "fullstack-dev",
-    icon: "/apps-outline.png",
-    title: "Full-Stack Development",
-    description:
-      "Delivering end-to-end solutions by integrating frontend and backend systems into complete applications.",
-    link: "#",
-  },
-  {
-    id: "api-dev",
-    icon: "/contract-outline.png",
+    id: "04",
     title: "API Development",
-    description:
-      "Designing and integrating APIs that enable communication between systems and services.",
-    link: "#",
-  },
-  {
-    id: "database",
-    icon: "/cloud-outline.png",
-    title: "Database Design & Management",
-    description:
-      "Structuring and managing data efficiently to ensure performance, reliability, and scalability.",
-    link: "#",
-  },
-  {
-    id: "testing",
-    icon: "/aperture-outline.png",
-    title: "Testing & Quality Assurance",
-    description:
-      "Writing and implementing tests to ensure software reliability and reduce bugs.",
-    link: "#",
-  },
-  {
-    id: "deployment",
-    icon: "/logo-github.png",
-    title: "Deployment & Version Control",
-    description:
-      "Deploying applications, managing code versions, and collaborating using modern development workflows.",
-    link: "#",
+    description: "Building secure, well-documented RESTful and GraphQL APIs to power cross-platform communications.",
   },
 ];
 
 const Services = () => {
   return (
-    <section
-      id="services"
-      className="w-11/12 max-w-3xl mx-auto mt-10 pt-20 text-center flex flex-col items-center gap-4"
-    >
-      <h1 className="text-lg mb-2 font-Ovo">What I Offer</h1>
+    <section id="services" className="w-full py-32 px-6 lg:px-[8%] bg-luxury-white">
+      <div className="max-w-360 mx-auto space-y-24">
 
-      <h2 className="font-Ovo text-3xl mb-6">Services</h2>
-
-      <p className="max-w-2xl font-Ovo text-gray-700 leading-relaxed mb-10">
-        I build complete web applications, handling both frontend and backend
-        development. My services include creating responsive user interfaces,
-        developing secure and scalable backend systems, designing APIs, and
-        integrating frontend and backend into seamless, high-performing
-        applications.
-      </p>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
-        {serviceData.map((item) => (
-          <div
-            key={item.id}
-            className="
-              border border-gray-300 rounded-xl p-6 text-left
-              transition-all duration-300
-              hover:shadow-lg
-              sm:hover:-translate-y-1
-            "
-          >
-            <Image
-              src={item.icon}
-              alt={`${item.title} icon`}
-              width={24}
-              height={24}
-              className="mb-4"
-            />
-
-            <h3 className="font-Ovo font-semibold mb-3 text-gray-800">
-              {item.title}
-            </h3>
-
-            <p className="text-gray-600 text-sm mb-5">
-              {item.description}
-            </p>
-
-            <Link
-              href={item.link}
-              className="text-blue-600 flex items-center gap-2 text-sm hover:underline"
-            >
-              Learn More
-              <Image
-                src="/arrow-forward-outline.png"
-                alt="Arrow icon"
-                width={16}
-                height={16}
-              />
-            </Link>
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 border-b border-luxury-black/10 pb-16">
+          <div className="space-y-6">
+            <h4 className="text-xs uppercase tracking-[0.3em] font-bold text-luxury-gray">Capabilities</h4>
+            <h2 className="text-6xl md:text-8xl text-luxury-black tracking-tighter">
+              What I <span className="italic font-normal">Offer</span>
+            </h2>
           </div>
-        ))}
+          <div className="max-w-md">
+            <p className="text-luxury-gray leading-relaxed font-medium">
+              Merging technical excellence with aesthetic precision to build digital solutions that transcend standard expectations.
+            </p>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0.5 bg-luxury-black/10">
+          {serviceData.map((item) => (
+            <div
+              key={item.id}
+              className="bg-luxury-white p-10 space-y-12 h-full flex flex-col justify-between hover:bg-luxury-black hover:text-white transition-all duration-500 group"
+            >
+              <div className="space-y-6">
+                <span className="text-xs font-bold uppercase tracking-widest text-luxury-gray group-hover:text-luxury-beige transition-colors">
+                  {item.id}
+                </span>
+                <h3 className="text-3xl font-serif leading-tight">
+                  {item.title}
+                </h3>
+              </div>
+
+              <p className="text-luxury-gray text-sm leading-relaxed group-hover:text-luxury-beige/80 transition-colors">
+                {item.description}
+              </p>
+            </div>
+          ))}
+        </div>
+
       </div>
     </section>
   );

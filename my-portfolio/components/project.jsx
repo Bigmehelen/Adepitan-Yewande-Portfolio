@@ -5,62 +5,93 @@ const portfolioData = [
   {
     title: "Smart Park",
     bgImage: "/park.jpg",
-    description: "Smart Parking Lot System",
+    description: "Intelligent Parking Management System",
+    category: "Architecture",
     link: "#",
   },
   {
-    title: " Helen Artwork Gallery",
+    title: "Helen Art Gallery",
     bgImage: "/unspla.jpg",
-    description: "Online Artwork Website",
+    description: "Curated Digital Art Exhibition",
+    category: "Art and Style",
     link: "#",
   },
   {
-    title: "Url Shortener Service",
+    title: "Link Shortener",
     bgImage: "/shortner.avif",
-    description: "A URL Shortening App",
+    description: "High-performance URL infrastructure",
+    category: "Engineering",
     link: "#",
   },
 ];
 
 const Project = () => {
   return (
-    <div id="project"
-      className="w-11/12 max-w-3xl mx-auto pt-20 mt-10 text-center flex flex-col items-center gap-4"
-    >
-      <h1 className="text-2xl mb-10 font-Ovo">My Portfolio</h1>
+    <section id="project" className="w-full py-32 px-6 lg:px-[8%] bg-white">
+      <div className="max-w-360 mx-auto space-y-24">
 
-      <p className="text-lg font-Ovo max-w-2xl mx-auto mt-5 mb-10">
-        Welcome to my portfolio! You can explore all my projects.
-      </p>
+        <div className="space-y-6 max-w-2xl">
+          <h4 className="text-xs uppercase tracking-[0.3em] font-bold text-luxury-gray">Selected Works</h4>
+          <h2 className="text-6xl md:text-8xl text-luxury-black tracking-tighter">
+            Featured <span className="italic font-normal">Projects</span>
+          </h2>
+        </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-xl w-full">
-        {portfolioData.map((item, index) => (
-          <div
-            key={index}
-            className="relative bg-cover + bg-center + bg-no-repeat aspect-square rounded-xl overflow-hidden cursor-pointer group hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
-            style={{ backgroundImage: `url(${item.bgImage})`}}
-          >
-            <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition" />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20">
+          {portfolioData.map((item, index) => (
+            <div
+              key={index}
+              className={`group cursor-pointer ${index === 1 ? 'md:mt-32' : ''}`}
+            >
+              <div className="relative aspect-16/10 overflow-hidden rounded-lg bg-luxury-black/5">
+                <Image
+                  src={item.bgImage}
+                  alt={item.title}
+                  fill
+                  className="object-cover transition-transform duration-1000 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-luxury-black/0 group-hover:bg-luxury-black/20 transition-all duration-500" />
 
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-[85%] bg-white rounded-lg p-4 flex items-center justify-between gap-4">
-              <div className="text-left">
-                <h4 className="font-Ovo font-semibold text-gray-800">
-                  {item.title}
-                </h4>
-                <p className="text-gray-600 text-sm">
-                  {item.description}
-                </p>
+                <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <span className="px-4 py-1.5 bg-white/10 backdrop-blur-md rounded-full text-[10px] uppercase font-bold text-white tracking-widest border border-white/20">
+                    {item.category}
+                  </span>
+                </div>
               </div>
 
-              <div className="border border-black rounded-full w-9 h-9 flex items-center justify-center shrink-0">
-                <Image
-                  src="/arrow-forward-outline.png" width={20}height={20} alt="send-icon" />
+              <div className="mt-8 flex items-start justify-between">
+                <div className="space-y-2">
+                  <h3 className="text-3xl font-serif text-luxury-black group-hover:italic transition-all">
+                    {item.title}
+                  </h3>
+                  <p className="text-luxury-gray text-sm font-medium">
+                    {item.description}
+                  </p>
+                </div>
+                <div className="pt-2">
+                  <div className="w-10 h-10 border border-luxury-black/10 rounded-full flex items-center justify-center group-hover:bg-luxury-black transition-all">
+                    <Image
+                      src="/arrow-forward-outline.png"
+                      alt=""
+                      width={16}
+                      height={16}
+                      className="group-hover:invert transition-all"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+
+        <div className="flex justify-center pt-20">
+          <button className="px-12 py-4 border border-luxury-black text-luxury-black font-bold uppercase tracking-widest text-xs hover:bg-luxury-black hover:text-white transition-all duration-300">
+            Explore All Projects
+          </button>
+        </div>
+
       </div>
-    </div>
+    </section>
   );
 };
 
