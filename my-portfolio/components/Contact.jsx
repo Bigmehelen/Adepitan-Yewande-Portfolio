@@ -1,14 +1,12 @@
+"use client";
 import React, { useState } from 'react'
-
 const Contact = () => {
   const [result, setResult] = useState("");
 
   const onSubmit = async (event) => {
-    event.preventDefault();
-    setResult("Sending...");
+    event.preventDefault(); setResult("Sending...");
     const formData = new FormData(event.target);
-    formData.append("access_key", "6495d23c-46b6-4387-bb3e-5d67b277e67b");
-
+    formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY);
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       body: formData
@@ -16,6 +14,7 @@ const Contact = () => {
 
     const data = await response.json();
     setResult(data.success ? "Successfully Sent!" : "Error. Try again.");
+    event.target.reset();
   };
 
   return (

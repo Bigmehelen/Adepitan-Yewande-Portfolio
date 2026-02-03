@@ -21,7 +21,7 @@ const NavBar = () => {
   }
 
   return (
-    <nav className={`w-full fixed top-0 left-0 z-50 transition-all bg-rose-50 duration-300 border-b ${isScrolled ? "bg-luxury-white/80 backdrop-blur-md py-4 border-luxury-black/10 shadow-sm" : "bg-transparent py-6 border-transparent"}`}>
+    <nav className={`w-full fixed top-0 left-0 z-50 transition-all duration-300 border-b ${isScrolled ? "bg-luxury-white/80 backdrop-blur-md py-4 border-luxury-black/10 shadow-sm" : "bg-transparent py-6 border-transparent"}`}>
       <div className="max-w-360 mx-auto flex items-center justify-between px-6 lg:px-[8%]">
         <a href="#top" className="font-serif text-3xl tracking-tighter text-luxury-black">
           Yewande<span className="text-luxury-gray">.</span>
@@ -45,7 +45,7 @@ const NavBar = () => {
         </div>
       </div>
 
-      <ul ref={sideMenuRef} className='flex md:hidden items-center bg-rose-50 flex-col gap-8 px-10 py-24 fixed top-0 bottom-0 -right-64 w-64 h-screen transition-transform duration-500 ease-in-out shadow-2xl z-50'>
+      <ul ref={sideMenuRef} className='flex md:hidden items-center bg-luxury-white flex-col gap-8 px-10 py-24 fixed top-0 bottom-0 -right-64 w-64 h-screen transition-transform duration-500 ease-in-out shadow-2xl z-50'>
         <div className="absolute right-8 top-8" onClick={closeMenu}>
           <Image src="/close-outline.png" alt="close" width={24} height={24} className="w-6 cursor-pointer" />
         </div>

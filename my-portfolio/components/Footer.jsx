@@ -34,7 +34,7 @@ const Footer = () => {
             Yewande<span className="text-luxury-gray">.</span>
           </h2>
           <p className="text-xs uppercase tracking-[0.2em] font-bold text-luxury-gray">
-            Software Engineer & Product Designer
+            Software Engineer
           </p>
         </div>
 

@@ -26,7 +26,8 @@ const Header = () => {
           transition={{ delay: 0.2, duration: 0.8 }}
           className="text-5xl md:text-7xl lg:text-8xl leading-[1.1] text-luxury-black"
         >
-          Crafting <span className="italic font-normal serif">Digital Solutions </span> <br />
+          Crafting <span className="italic font-normal serif">Digital Solutions</span> <br />
+          <span className="text-stroke">Experiences</span> in Lagos.
         </motion.h1>
 
         <motion.div
@@ -37,7 +38,7 @@ const Header = () => {
         >
           <div className="max-w-xs text-left">
             <p className="text-luxury-gray text-sm leading-relaxed ">
-              Im a Nigeria based software engineer, and I specialize in building highly functional and visually stunning web applications that focus on the user journey.
+              I'm a Nigeria based software engineer, and I specialize in building highly functional and visually stunning web applications that focus on the user journey.
             </p>
           </div>
 
