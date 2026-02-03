@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 
 const Contact = () => {
-
-   const [result, setResult] = useState("");
+  const [result, setResult] = useState("");
 
   const onSubmit = async (event) => {
     event.preventDefault();
+    setResult("Sending...");
     const formData = new FormData(event.target);
     formData.append("access_key", "6495d23c-46b6-4387-bb3e-5d67b277e67b");
 
@@ -15,33 +15,90 @@ const Contact = () => {
     });
 
     const data = await response.json();
-    setResult(data.success ? "Success!" : "Error");
+    setResult(data.success ? "Successfully Sent!" : "Error. Try again.");
   };
 
   return (
-    <div id="contact"
-      className="w-11/12 max-w-3xl mx-auto pt-24 mt-10 text-center flex flex-col items-center gap-4">
-      <h1 className="text-lg mb-2 font-Ovo"> Connect With Me </h1>
+    <section id="contact" className="w-full py-32 px-6 lg:px-[8%] bg-luxury-white">
+      <div className="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24">
 
-      <h3 className="font-Ovo text-3xl mb-6"> Contact </h3>
+        {/* Left: Content */}
+        <div className="space-y-12">
+          <div className="space-y-6">
+            <h4 className="text-xs uppercase tracking-[0.3em] font-bold text-luxury-gray">Interaction</h4>
+            <h2 className="text-6xl md:text-8xl text-luxury-black tracking-tighter leading-none">
+              Let's <br />
+              <span className="italic font-normal">Connect</span>
+            </h2>
+          </div>
 
-      <p className="max-w-2xl font-Ovo text-gray-700 leading-relaxed mb-10">
-        I'm excited to connect with you! Whether you have a project in mind,
-        want to collaborate, feel free to reach out.
-        You can contact me via email at <span className="font-bold text-black"><a href="mailto:wandebronze@gmail.com">wandebronze@gmail.com</a> </span> or connect with me on LinkedIn.
-      </p>
-      <form onSubmit={onSubmit} className='max-w-2xl mx-auto'>
-        <div className='flex flex-col gap-6 mt-6 mb-4 '>
-            <input type="text" placeholder="Your Name" name="name" required className="border outline-none border-gray-600 rounded-lg p-3 w-72 mb-2"/>
-            <input type="email" placeholder="Your Email" name="email" required className="border outline-none border-gray-600 rounded-lg p-3 w-72 mb-6"/>
+          <div className="space-y-8 max-w-md">
+            <p className="text-xl text-luxury-gray leading-relaxed font-medium">
+              I am currently available for new projects and collaborations. If you have an idea, let's bring it to life.
+            </p>
+            <div className="space-y-2">
+              <h5 className="text-xs uppercase tracking-widest font-bold text-luxury-black">Direct Email</h5>
+              <a href="mailto:wandebronze@gmail.com" className="text-2xl font-serif text-luxury-black hover:italic transition-all">
+                wandebronze@gmail.com
+              </a>
+            </div>
+          </div>
         </div>
-        <textarea placeholder="Your Message" name="message" rows='6' required className="border border-gray-600 rounded-lg p-3 w-72 h-32 mb-4"/>
-        <br/>
-        <button type="submit" className="bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800 transition-all duration-200 ease-in-out"> Send Message </button>
-      </form>
-       <span className="mt-4">{result}</span>
 
-    </div>
+        {/* Right: Form */}
+        <div className="bg-white p-12 lg:p-16 rounded-3xl border border-luxury-black/5 shadow-sm">
+          <form onSubmit={onSubmit} className="space-y-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+              <div className="space-y-2">
+                <label className="text-[10px] uppercase tracking-widest font-bold text-luxury-gray">Your Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="John Doe"
+                  required
+                  className="w-full bg-transparent border-b border-luxury-black/10 py-4 outline-none focus:border-luxury-black transition-colors"
+                />
+              </div>
+              <div className="space-y-2">
+                <label className="text-[10px] uppercase tracking-widest font-bold text-luxury-gray">Email Address</label>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="john@example.com"
+                  required
+                  className="w-full bg-transparent border-b border-luxury-black/10 py-4 outline-none focus:border-luxury-black transition-colors"
+                />
+              </div>
+            </div>
+
+            <div className="space-y-2">
+              <label className="text-[10px] uppercase tracking-widest font-bold text-luxury-gray">Message</label>
+              <textarea
+                name="message"
+                rows="4"
+                placeholder="I'd like to talk about..."
+                required
+                className="w-full bg-transparent border-b border-luxury-black/10 py-4 outline-none focus:border-luxury-black transition-colors resize-none"
+              />
+            </div>
+
+            <button
+              type="submit"
+              className="w-full py-6 bg-luxury-black text-white font-bold uppercase tracking-widest text-xs hover:bg-luxury-black/90 transition-all rounded-full"
+            >
+              Send Message
+            </button>
+
+            {result && (
+              <p className="text-center text-xs font-bold uppercase tracking-widest text-luxury-gray">
+                {result}
+              </p>
+            )}
+          </form>
+        </div>
+
+      </div>
+    </section>
   )
 }
 
