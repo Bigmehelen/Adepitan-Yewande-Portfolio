@@ -4,57 +4,63 @@ import Image from "next/image";
 const infoList = [
   {
     icon: "/language-outline.png",
-    title: "Languages & Frameworks",
-    description: "Java, JavaScript, Python, Frameworks like SpringBoot, React, Next.js, Django, Node.js",
+    title: "Stack",
+    description: "React, Next.js, SpringBoot, Node.js, Python, Java",
   },
   {
     icon: "/school-outline.png",
     title: "Education",
-    description: "B.Sc. in Computer Science from the National Open University of Nigeria (NOUN) Lagos, Nigeria",
+    description: "B.Sc. Computer Science, NOUN Lagos Nigeria",
   },
   {
     icon: "/bag-handle-outline.png",
-    title: "Projects",
-    description: "Built and deployed more than 3 full-stack applications",
+    title: "Experience",
+    description: "3+ Full-stack application deployments",
   },
 ];
 
 const About = () => {
   return (
-    <div id="about" className="w-11/12 max-w-3xl mx-auto pt-20 text-center flex flex-col items-center gap-4"
->
-      <h1 className="font-Ovo text-xl text-center mb-5"> Introduction </h1>
-      <h3 className="font-Ovo text-3xl text-center mb-5"> About Me </h3>
+    <section id="about" className="w-full py-32 px-6 lg:px-[8%] bg-white">
+      <div className="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
 
-      <p className="mb-6 max-w-3xl font-Ovo">
-            I’m a software engineer with a strong interest in building reliable,
-            user-focused applications. I enjoy turning complex problems into
-            simple, scalable solutions and writing clean, maintainable code.
-            I’m always learning, experimenting with new technologies, and
-            looking for opportunities to grow as a developer while making a
-            meaningful impact.
-        </p>
-
-      <div className="flex flex-col w-full lg:flex-row items-center justify-center gap-12 sm:space-y-4">
-        
-        <div className="w-64 sm:w-80 rounded-3xl py-10 flex-1">
-          <Image src="/wande.jpeg" alt="About image" width={400} height={400} className="rounded-3xl w-full h-auto"/>
+        <div className="lg:col-span-5 space-y-12">
+          <div className="relative aspect-[4/5] overflow-hidden rounded-2xl group">
+            <Image src="/wande.jpeg" alt="About image" fill className="object-cover transition-all duration-700" />
+          </div>
+          <div className="space-y-4">
+            <h4 className="text-xs uppercase tracking-[0.3em] font-bold text-luxury-gray">Personal Quote</h4>
+            <p className="font-serif text-2xl italic text-luxury-black">
+              "Design is Simplicity."
+            </p>
+          </div>
         </div>
 
-        <div className="flex-1">
-          <ul className="space-y-4 grid grid-cols-2 gap-6 max-w-2xl">
+        <div className="lg:col-span-7 space-y-16">
+          <div className="space-y-8">
+            <h2 className="text-6xl md:text-8xl text-luxury-black tracking-tight">
+              About <span className="italic font-normal">Me</span>
+            </h2>
+            <p className="text-xl text-luxury-gray leading-relaxed max-w-2xl font-medium">
+              I’m a software engineer dedicated to creating high-performance digital products. My approach combines technical precision with a refined eye for design, ensuring every pixel and every line of code serves a purpose.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {infoList.map((item, index) => (
-              <li key={index} className="border-[-0.5px] border-gray-400 py-4 cursor-pointer 
-              hover:-translate-y-1 duration-500 hover:light-Hover">
-                <Image src={item.icon} alt="" width={24} height={24} className="w-6 mt-3" />
-                <h4 className="font-Ovo font-semibold my-4 text-gray-700">{item.title}</h4>
-                <p className="text-gray-700 text-sm">{item.description}</p>
-              </li>
+              <div key={index} className="p-8 border border-luxury-black/5 hover:border-luxury-black/10 hover:bg-luxury-beige/10 transition-all duration-300 rounded-xl space-y-4">
+                <div className="w-12 h-12 bg-luxury-black text-white flex items-center justify-center rounded-lg">
+                  <Image src={item.icon} alt="" width={24} height={24} className="invert" />
+                </div>
+                <h3 className="text-2xl text-luxury-black">{item.title}</h3>
+                <p className="text-luxury-gray text-sm leading-relaxed">{item.description}</p>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
+
       </div>
-    </div>
+    </section>
   );
 };
 
