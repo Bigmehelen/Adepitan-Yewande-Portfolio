@@ -26,7 +26,7 @@ const portfolioData = [
 const Project = () => {
   return (
     <section id="project" className="w-full py-32 px-6 lg:px-[8%] bg-white">
-      <div className="max-w-[1440px] mx-auto space-y-24">
+      <div className="max-w-360 mx-auto space-y-24">
 
         <div className="space-y-6 max-w-2xl">
           <h4 className="text-xs uppercase tracking-[0.3em] font-bold text-luxury-gray">Selected Works</h4>
@@ -41,7 +41,7 @@ const Project = () => {
               key={index}
               className={`group cursor-pointer ${index === 1 ? 'md:mt-32' : ''}`}
             >
-              <div className="relative aspect-[16/10] overflow-hidden rounded-lg bg-luxury-black/5">
+              <div className="relative aspect-16/10 overflow-hidden rounded-lg bg-luxury-black/5">
                 <Image
                   src={item.bgImage}
                   alt={item.title}
