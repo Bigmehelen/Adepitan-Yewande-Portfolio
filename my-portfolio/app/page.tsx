@@ -1,5 +1,5 @@
 'use client';
-import Project from "../components/Project";
+import Project from "../components/ProjectCard";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import About from "../components/About";
