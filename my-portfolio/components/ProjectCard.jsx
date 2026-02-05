@@ -7,7 +7,7 @@ const portfolioData = [
     bgImage: "/park.jpg",
     description: "Intelligent Parking Management System",
     category: "Architecture",
-    link: "#",
+    link: "https://parkivo.netlify.app",
   },
   {
     bgImage: "/unspla.jpg",
