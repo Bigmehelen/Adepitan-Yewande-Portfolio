@@ -1,11 +1,11 @@
 'use client';
-import Project from '../components/Project';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import About from '../components/About';
-import Services from '../components/Services';
-import Contact from '../components/Contact';
-import NavBar from '../components/NavBar';
+import Project from "../components/Project";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import About from "../components/About";
+import Services from "../components/Services";
+import Contact from "../components/Contact";
+import NavBar from "../components/NavBar";
 
 function Home() {
   return (
