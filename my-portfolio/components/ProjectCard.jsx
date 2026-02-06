@@ -12,6 +12,7 @@ const portfolioData = [
   {
     bgImage: "/unspla.jpg",
     description: "Curated Digital Art Exhibition",
+    category: "Design",
     link: "#",    
   },
   {
