@@ -13,7 +13,7 @@ const portfolioData = [
     bgImage: "/unspla.jpg",
     description: "Curated Digital Art Exhibition",
     category: "Design",
-    link: "#",    
+    link: "https://helen-artgallery.netlify.app/",    
   },
   {
     title: "Link Shortener",
