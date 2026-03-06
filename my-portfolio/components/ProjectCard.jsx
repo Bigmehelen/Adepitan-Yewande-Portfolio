@@ -10,6 +10,7 @@ const portfolioData = [
     link: "https://parkivo.netlify.app",
   },
   {
+    title: "Helen Art Gallery",
     bgImage: "/unspla.jpg",
     description: "Curated Digital Art Exhibition",
     category: "Design",
@@ -68,7 +69,10 @@ const Project = () => {
                   </p>
                 </div>
                 <div className="pt-2">
-                  <div className="w-10 h-10 border border-luxury-black/10 rounded-full flex items-center justify-center group-hover:bg-luxury-black transition-all">
+                  <a className="w-10 h-10 border border-luxury-black/10 rounded-full flex items-center justify-center group-hover:bg-luxury-black transition-all"
+                      href={item.link}
+                      target="_blank" 
+                      rel="noopener noreferrer">
                     <Image
                       src="/arrow-forward-outline.png"
                       alt=""
@@ -76,7 +80,7 @@ const Project = () => {
                       height={16}
                       className="group-hover:invert transition-all"
                     />
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>
