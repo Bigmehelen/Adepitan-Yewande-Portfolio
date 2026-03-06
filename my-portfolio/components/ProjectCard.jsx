@@ -21,7 +21,7 @@ const portfolioData = [
     bgImage: "/shortner.avif",
     description: "High-performance URL infrastructure",
     category: "Engineering",
-    link: "shortner-app.netlify.app",
+    link: "https://shortner-app.netlify.app",
   },
 ];
 
