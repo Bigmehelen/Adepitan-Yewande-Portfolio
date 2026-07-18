@@ -20,7 +20,7 @@ const socialIcons = [
   {
     title: "LinkedIn",
     icon: "/logo-linkedin.png",
-    link: "https://www.linkedin.com/in/yewande-adepitan-63607930b"
+    link: "https://www.linkedin.com/in/yewande-adepitan"
   }
 ];
 
