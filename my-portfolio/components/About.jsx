@@ -26,7 +26,7 @@ const About = () => {
 
         <div className="lg:col-span-5 space-y-12">
           <div className="relative aspect-4/5 overflow-hidden rounded-2xl group">
-            <Image src="/wande.jpeg" alt="About image" fill className="object-cover transition-all duration-700" />
+            <Image src="/wandeai.jpeg" alt="About image" fill className="object-cover transition-all duration-700" />
           </div>
           <div className="space-y-4">
             <h4 className="text-xs uppercase tracking-[0.3em] font-bold text-luxury-gray">Personal Quote</h4>
